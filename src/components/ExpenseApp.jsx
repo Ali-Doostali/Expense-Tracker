@@ -1,5 +1,6 @@
 import { useState } from "react";
 import TransActionComponent from "./TransActionComponent";
+import OverViewComponent from "./OverViewComponent";
 
 const ExpenseApp = () => {
   const [expense, setExpense] = useState(0);
@@ -8,14 +9,7 @@ const ExpenseApp = () => {
 
   return (
     <section className="container">
-      <div className="topSection">
-        <p>Balance : {income - expense}</p>
-        <button>Add</button>
-      </div>
-      <div className="downSection">
-        <div>Expenese : {expense}</div>
-        <div>Income : {income}</div>
-      </div>
+      <OverViewComponent expense={expense} income={income} />
       <TransActionComponent transaction={transaction} />
     </section>
   );
