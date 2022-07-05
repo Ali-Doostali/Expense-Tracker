@@ -9,23 +9,116 @@
   padding-top: 30px;
   font-family: montserrat;
 }
-.container{
+
+.App h2{
+  padding-left: 15px;
+  justify-content: center;
+  width: 200px;
+  border: 1px solid #c2daca;
+  border-radius: 5px;
+  background-color: #e6dfdf;
+  margin-bottom: 10px;
+}
+.container {
   display: flex;
   flex-direction: column;
   width: 300px;
   background-color: #fff;
   border: 1px solid #ccc;
   padding: 10px;
-  border-radius: 5px ;
+  border-radius: 5px;
 }
-.topSection{
+.topSection {
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
-.resultSection{
+.resultSection {
   display: flex;
   justify-content: space-between;
   align-items: center;
   margin-top: 20px;
+}
+.expenseBox {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: column;
+  height: 50px;
+  width: 135px;
+  border-radius: 5px;
+  padding: 5px 10px;
+  border: 1px solid #ccc;
+  margin-bottom: 10px;
+}
+.expenseBox span {
+  font-weight: bold;
+  color: #05a540;
+}
+.btn {
+  outline: none;
+  background-color: #d0f7ef;
+  padding: 5px 10px;
+  color: #15803d;
+  border-radius: 5px;
+  border: 1px solid #9eb8a7;
+}
+.primary {
+  background-color: #15803d;
+  color: #fff;
+  border: none;
+  margin: 15px;
+}
+.cancel {
+  background-color: #ef4444;
+  color: #fecaca;
+  border: 1px solid #fecaca;
+}
+
+form {
+  display: flex;
+  padding: 5px;
+  flex-direction: column;
+  min-height: 150px;
+  justify-content: space-around;
+}
+input{
+  padding-left: 5px;
+  padding-bottom: 2px;
+  border: 1px solid #0d1d2c;
+  border-radius: 5px;
+  outline: none;
+}
+input::placeholder{
+  font-size: 11px;
+  color: #15803d;
+}
+input:focus{
+  outline: none;
+  border: 2px solid #05a540;
+  border-radius: 5px;
+}
+.radioBox label{
+  margin-left: 3px;
+  
+}
+
+input[value="income"] {
+  margin-left: 10px;
+}
+.radioBox{
+  display: flex;
+  margin-top: 10px;
+  align-items: center;
+  font-size: 14px;
+}
+.transaction{
+  
+  margin: 5px 0;
+  border-radius: 5px;
+  padding: 4px 7px;
+  background-color: #e6dfdf;
+  display: flex;
+  justify-content: space-between;
+  border-right: 4px solid #05a540 ;
 }

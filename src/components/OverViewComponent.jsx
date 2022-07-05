@@ -7,12 +7,12 @@ const OverViewComponent = ({expense,income,addTransaction }) => {
         <>
         <div className="topSection">
         <p>Balance : {income - expense}</p>
-        <button onClick={()=> setIsShow((prevState)=> !prevState)}>{isShow ? "Cancel" : "Add"}</button>
+        <button className={`btn ${isShow ? "cancel" : ""}`} onClick={()=> setIsShow((prevState)=> !prevState)}>{isShow ? "Cancel" : "Add"}</button>
       </div>
-      {isShow && <TransActionForm  addTransaction={addTransaction}/>}
+      {isShow && <TransActionForm  addTransaction={addTransaction} setIsShow={setIsShow}/>}
       <div className="resultSection">
-        <div>Expenese : {expense}</div>
-        <div>Income : {income}</div>
+        <div className="expenseBox">Expenese <span style={{color : "red"}}>{expense} $</span></div>
+        <div className="expenseBox">Income <span>{income} $</span></div>
       </div>
       </>
      );

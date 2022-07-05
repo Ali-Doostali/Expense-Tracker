@@ -8,7 +8,6 @@ const ExpenseApp = () => {
   const [transaction, setTransaction] = useState([]);
 
   const addTransaction = (formValues) => {
-    console.log(formValues);
     const data = {...formValues , id : Date.now()};
     setTransaction([...transaction,data]);
   };
